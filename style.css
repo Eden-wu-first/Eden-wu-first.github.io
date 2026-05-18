@@ -30,7 +30,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.75;
-  font-size: 20px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -182,7 +182,7 @@ main {
 /* ── TAGS ── */
 .tag {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--color-tag-text);
   background: var(--color-tag-bg);
