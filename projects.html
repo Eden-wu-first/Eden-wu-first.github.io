@@ -39,12 +39,12 @@
           <span class="tag">C++</span>
         </div>
       </div>
-      <p class="project-desc">
-        Implemented a RISC-V instruction scheduler based on a simplified LLVM model, covering dependency graph construction, priority calculation, and full List Scheduling workflow.
-        Built an instruction-level DAG to detect three types of data dependencies (RAW/WAR/WAW) optimized for single-pass analysis.
-        Developed List Scheduling algorithm with an Inflight queue, distinguishing release timing of true vs. order dependencies to reduce pipeline stalls.
-      </p>
       <div class="project-period">Feb 2026 – Mar 2026</div>
+      <ul class="project-bullets">
+        <li>Implemented a RISC-V instruction scheduler based on a simplified LLVM model using C++, covering dependency graph construction, priority calculation, and full List Scheduling workflow</li>
+        <li>Built an instruction-level directed acyclic graph (DAG) to detect three types of data dependencies (RAW/WAR/WAW), optimized to complete full dependency analysis in a single pass</li>
+        <li>Developed List Scheduling algorithm with an Inflight queue, distinguished release timing of true dependencies and order dependencies to reduce pipeline stalls</li>
+      </ul>
       <div class="project-links">
         <!-- ✏️ 替换为实际链接 -->
         <a href="#">GitHub →</a>
@@ -59,12 +59,12 @@
           <span class="tag">Python</span>
         </div>
       </div>
-      <p class="project-desc">
-        Designed and implemented a Vim-style multi-line console text editor supporting over 20 editing commands including insert, delete, cursor movement, line copy/paste, and more.
-        Devised top-down modular architecture with dictionary-based command mapping; integrated stack data structures for multi-level state tracking.
-        Configured regular expressions for word-level cursor jump logic; achieved dual-layer visual display via ANSI escape sequences.
-      </p>
       <div class="project-period">Feb 2025 – May 2025</div>
+      <ul class="project-bullets">
+        <li>Designed and implemented a Vim-style multi-line console text editor supporting over 20 editing commands (insert, delete, cursor movement, line copy/paste, etc.)</li>
+        <li>Devised top-down modular architecture with dictionary-based command mapping; integrated stack data structures for multi-level state tracking, demonstrating proficiency in Python program design and data structure application</li>
+        <li>Configured regular expressions for word-level cursor jump logic; achieved dual-layer visual display (inline cursor highlighting and line-level marking) via ANSI escape sequences</li>
+      </ul>
       <div class="project-links">
         <a href="https://github.com/Eden-wu-first/Python-Based-Multi-Line-Console-Text-Editor">GitHub →</a>
       </div>
@@ -78,11 +78,11 @@
           <span class="tag">Data Analysis</span>
         </div>
       </div>
-      <p class="project-desc">
-        Led a group research project on "Port and Urban Symbiosis: Past and Present" as part of a joint programme by CUHK-Shenzhen, CUHK, and Ningbo University.
-        Integrated public economic data and corporate interview records to build a multi-dimensional comparative analysis framework across Hangzhou, Ningbo, Shenzhen, and Hong Kong.
-      </p>
       <div class="project-period">Jul 2025</div>
+      <ul class="project-bullets">
+        <li>Achieved selection in a joint research program by CUHK-Shenzhen, CUHK, and Ningbo University; investigated port-city symbiosis patterns across four cities (Hangzhou, Ningbo, Shenzhen and Hong Kong) over two weeks, collecting primary data from technology companies including Tencent and Forms Syntron</li>
+        <li>Led a group research project on "Port and Urban Symbiosis: Past and Present", integrating public economic data and corporate interview records to build a multi-dimensional comparative analysis framework; demonstrated findings at the program's closing ceremony</li>
+      </ul>
       <div class="project-links">
         <a href="#">Slides →</a>
       </div>
@@ -105,11 +105,25 @@
 <style>
   .projects-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
   .project-card { padding: 24px 28px; }
-  .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; gap: 12px; }
+  .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; gap: 12px; }
   .project-header h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--color-text); }
   .project-tags { display: flex; gap: 6px; flex-shrink: 0; }
-  .project-desc { font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 8px; }
-  .project-period { font-size: 0.82rem; color: var(--color-text-muted); font-style: italic; font-family: var(--font-mono); margin-bottom: 10px; }
+  .project-period { font-size: 0.82rem; color: var(--color-text-muted); font-style: italic; font-family: var(--font-mono); margin-bottom: 12px; }
+  .project-bullets {
+    margin: 0 0 14px 18px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .project-bullets li {
+    font-size: 0.92rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+  .project-bullets li::marker {
+    color: var(--color-accent);
+  }
   .project-links { display: flex; gap: 16px; }
   .project-links a { font-size: 0.85rem; font-weight: 500; color: var(--color-accent); }
   @media (max-width: 680px) {
