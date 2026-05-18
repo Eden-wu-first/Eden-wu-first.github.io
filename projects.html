@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eden Wu — Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Eden Wu</a>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header fade-in">
+    <h1>Projects</h1>
+    <p>Selected research projects and open-source contributions.</p>
+  </div>
+
+  <div class="projects-grid fade-in">
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>Project Name 1（示例）</h3>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        简要描述这个项目的目标和你的贡献，比如"开发了一个基于XX的系统，用于解决XX问题，在XX数据集上取得了SOTA结果。"
+      </p>
+      <div class="project-links">
+        <a href="#">GitHub →</a>
+        <a href="#">Demo →</a>
+        <a href="#">Paper →</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>Project Name 2（示例）</h3>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        简要描述第二个项目。可以是课程项目、开源贡献或个人项目。
+      </p>
+      <div class="project-links">
+        <a href="#">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>Project Name 3（示例）</h3>
+        <div class="project-tags">
+          <span class="tag">C++</span>
+          <span class="tag">CUDA</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        简要描述第三个项目，或者删除这张卡片。
+      </p>
+      <div class="project-links">
+        <a href="#">GitHub →</a>
+        <a href="#">Report →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Eden Wu · Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-card { padding: 24px 28px; }
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+  .project-header h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  .project-tags { display: flex; gap: 6px; flex-shrink: 0; }
+  .project-desc {
+    font-size: 0.92rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .project-links { display: flex; gap: 16px; }
+  .project-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 680px) {
+    .project-header { flex-direction: column; gap: 8px; }
+  }
+</style>
+
+</body>
+</html>

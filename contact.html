@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eden Wu — Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Eden Wu</a>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header fade-in">
+    <h1>Contact</h1>
+    <p>Feel free to reach out for collaboration, questions, or just to say hi.</p>
+  </div>
+
+  <div class="contact-grid fade-in">
+    <div class="contact-card card">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--color-accent)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <h3>Email</h3>
+      <a href="mailto:your@email.com">your@email.com</a>
+    </div>
+
+    <div class="contact-card card">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--color-accent)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </div>
+      <h3>GitHub</h3>
+      <a href="https://github.com/Eden-wu-first" target="_blank">@Eden-wu-first</a>
+    </div>
+
+    <div class="contact-card card">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--color-accent)"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+      </div>
+      <h3>Google Scholar</h3>
+      <a href="https://scholar.google.com/" target="_blank">Eden Wu's Profile</a>
+    </div>
+
+    <div class="contact-card card">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--color-accent)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+      </div>
+      <h3>Office</h3>
+      <p>Room XXX, Building XX<br />University of XX<br />City, Country</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Eden Wu · Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .contact-card {
+    padding: 28px;
+    text-align: center;
+  }
+  .contact-icon { margin-bottom: 14px; }
+  .contact-card h3 {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+  }
+  .contact-card a, .contact-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 680px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+</body>
+</html>
