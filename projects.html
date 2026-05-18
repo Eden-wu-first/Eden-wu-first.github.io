@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eden Wu — Projects</title>
+  <title>Wu Caiyan — Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-name">Eden Wu</a>
+    <a href="index.html" class="nav-name">Caiyan Wu</a>
     <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -27,59 +27,64 @@
 <main>
   <div class="page-header fade-in">
     <h1>Projects</h1>
-    <p>Selected research projects and open-source contributions.</p>
+    <p>Course projects and technical explorations.</p>
   </div>
 
   <div class="projects-grid fade-in">
 
     <div class="card project-card">
       <div class="project-header">
-        <h3>Project Name 1（示例）</h3>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">PyTorch</span>
-        </div>
-      </div>
-      <p class="project-desc">
-        简要描述这个项目的目标和你的贡献，比如"开发了一个基于XX的系统，用于解决XX问题，在XX数据集上取得了SOTA结果。"
-      </p>
-      <div class="project-links">
-        <a href="#">GitHub →</a>
-        <a href="#">Demo →</a>
-        <a href="#">Paper →</a>
-      </div>
-    </div>
-
-    <div class="card project-card">
-      <div class="project-header">
-        <h3>Project Name 2（示例）</h3>
-        <div class="project-tags">
-          <span class="tag">JavaScript</span>
-          <span class="tag">React</span>
-        </div>
-      </div>
-      <p class="project-desc">
-        简要描述第二个项目。可以是课程项目、开源贡献或个人项目。
-      </p>
-      <div class="project-links">
-        <a href="#">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="card project-card">
-      <div class="project-header">
-        <h3>Project Name 3（示例）</h3>
+        <h3>RISC-V Instruction Scheduler</h3>
         <div class="project-tags">
           <span class="tag">C++</span>
-          <span class="tag">CUDA</span>
         </div>
       </div>
       <p class="project-desc">
-        简要描述第三个项目，或者删除这张卡片。
+        Implemented a RISC-V instruction scheduler based on a simplified LLVM model, covering dependency graph construction, priority calculation, and full List Scheduling workflow.
+        Built an instruction-level DAG to detect three types of data dependencies (RAW/WAR/WAW) optimized for single-pass analysis.
+        Developed List Scheduling algorithm with an Inflight queue, distinguishing release timing of true vs. order dependencies to reduce pipeline stalls.
       </p>
+      <div class="project-period">Feb 2026 – Mar 2026</div>
       <div class="project-links">
+        <!-- ✏️ 替换为实际链接 -->
         <a href="#">GitHub →</a>
         <a href="#">Report →</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>Python-Based Multi-Line Console Text Editor</h3>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        Designed and implemented a Vim-style multi-line console text editor supporting over 20 editing commands including insert, delete, cursor movement, line copy/paste, and more.
+        Devised top-down modular architecture with dictionary-based command mapping; integrated stack data structures for multi-level state tracking.
+        Configured regular expressions for word-level cursor jump logic; achieved dual-layer visual display via ANSI escape sequences.
+      </p>
+      <div class="project-period">Feb 2025 – May 2025</div>
+      <div class="project-links">
+        <a href="#">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>Port-City Symbiosis Research</h3>
+        <div class="project-tags">
+          <span class="tag">Research</span>
+          <span class="tag">Data Analysis</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        Led a group research project on "Port and Urban Symbiosis: Past and Present" as part of a joint programme by CUHK-Shenzhen, CUHK, and Ningbo University.
+        Integrated public economic data and corporate interview records to build a multi-dimensional comparative analysis framework across Hangzhou, Ningbo, Shenzhen, and Hong Kong.
+      </p>
+      <div class="project-period">Jul 2025</div>
+      <div class="project-links">
+        <a href="#">Slides →</a>
       </div>
     </div>
 
@@ -87,7 +92,7 @@
 </main>
 
 <footer>
-  <p>&copy; 2026 Eden Wu · Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p>&copy; 2026 Caiyan Wu · Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
 </footer>
 
 <script>
@@ -98,39 +103,15 @@
 </script>
 
 <style>
-  .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  .projects-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
   .project-card { padding: 24px 28px; }
-  .project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    gap: 12px;
-  }
-  .project-header h3 {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-text);
-  }
+  .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; gap: 12px; }
+  .project-header h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--color-text); }
   .project-tags { display: flex; gap: 6px; flex-shrink: 0; }
-  .project-desc {
-    font-size: 0.92rem;
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-    margin-bottom: 14px;
-  }
+  .project-desc { font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 8px; }
+  .project-period { font-size: 0.82rem; color: var(--color-text-muted); font-style: italic; font-family: var(--font-mono); margin-bottom: 10px; }
   .project-links { display: flex; gap: 16px; }
-  .project-links a {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--color-accent);
-  }
-
+  .project-links a { font-size: 0.85rem; font-weight: 500; color: var(--color-accent); }
   @media (max-width: 680px) {
     .project-header { flex-direction: column; gap: 8px; }
   }

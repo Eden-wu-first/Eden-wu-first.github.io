@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eden Wu — Publications</title>
+  <title>Wu Caiyan — Publications</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-name">Eden Wu</a>
+    <a href="index.html" class="nav-name">Caiyan Wu</a>
     <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -30,40 +30,23 @@
     <p>† indicates equal contribution · * indicates corresponding author</p>
   </div>
 
-  <!-- ═══ 2026 ═══ -->
+  <div class="coming-soon fade-in">
+    <div class="coming-icon">📝</div>
+    <p>Publications coming soon — stay tuned!</p>
+    <p class="coming-sub">
+      <!-- ✏️ 发表论文后在这里添加，格式参考下方注释 -->
+    </p>
+  </div>
+
+  <!--
+  ═══ 发表论文后，取消注释以下模板并填入信息 ═══
+
   <h2 class="section-title fade-in">2026</h2>
   <div class="pub-list fade-in">
     <div class="card pub-item">
-      <div class="pub-title">Your Paper Title Goes Here: A Really Interesting Study</div>
-      <div class="pub-authors"><span class="me">Eden Wu</span>, Co-author A, Co-author B, Advisor C*</div>
-      <div class="pub-venue">Conference / Journal Name (CCF-A), 2026</div>
-      <div class="pub-links">
-        <a href="#" class="tag">PDF</a>
-        <a href="#" class="tag">arXiv</a>
-        <a href="#" class="tag">Code</a>
-        <a href="#" class="tag">Slides</a>
-        <a href="#" class="tag">BibTeX</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ 2025 ═══ -->
-  <h2 class="section-title fade-in" style="margin-top:48px;">2025</h2>
-  <div class="pub-list fade-in">
-    <div class="card pub-item">
-      <div class="pub-title">Another Great Paper Title With Meaningful Findings</div>
-      <div class="pub-authors">Co-author X†, <span class="me">Eden Wu</span>†, Advisor Y*</div>
-      <div class="pub-venue">Workshop on XX @ Conference YY, 2025</div>
-      <div class="pub-links">
-        <a href="#" class="tag">PDF</a>
-        <a href="#" class="tag">Poster</a>
-      </div>
-    </div>
-
-    <div class="card pub-item">
-      <div class="pub-title">A Third Paper About Something Exciting and Novel</div>
-      <div class="pub-authors"><span class="me">Eden Wu</span>, Co-author Z, Advisor W*</div>
-      <div class="pub-venue">Preprint · arXiv:2025.XXXXX</div>
+      <div class="pub-title">Your Paper Title</div>
+      <div class="pub-authors"><span class="me">Caiyan Wu</span>, Co-author A, Co-author B*</div>
+      <div class="pub-venue">Conference / Journal Name, 2026</div>
       <div class="pub-links">
         <a href="#" class="tag">PDF</a>
         <a href="#" class="tag">arXiv</a>
@@ -71,11 +54,12 @@
       </div>
     </div>
   </div>
+  -->
 
 </main>
 
 <footer>
-  <p>&copy; 2026 Eden Wu · Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p>&copy; 2026 Caiyan Wu · Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
 </footer>
 
 <script>
@@ -86,14 +70,15 @@
 </script>
 
 <style>
-  .pub-list { display: flex; flex-direction: column; gap: 20px; }
-  .pub-title {
-    font-family: var(--font-serif);
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: 6px;
+  .coming-soon {
+    text-align: center; padding: 80px 24px;
+    background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px;
   }
+  .coming-icon { font-size: 2.5rem; margin-bottom: 16px; }
+  .coming-soon p { font-size: 1.05rem; color: var(--color-text-secondary); }
+  .coming-sub { font-size: 0.88rem; color: var(--color-text-muted); margin-top: 8px; }
+  .pub-list { display: flex; flex-direction: column; gap: 20px; }
+  .pub-title { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; line-height: 1.4; margin-bottom: 6px; }
   .pub-authors { font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 4px; }
   .pub-authors .me { font-weight: 600; color: var(--color-text); text-decoration: underline; text-underline-offset: 2px; }
   .pub-venue { font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; }
