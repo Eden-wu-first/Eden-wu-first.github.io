@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wu Caiyan — Writing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Caiyan Wu</a>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html">Projects</a>
+      <a href="writing.html" class="active">Writing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header fade-in">
+    <h1>Writing</h1>
+    <p>Selected course papers and essays from my undergraduate studies.</p>
+  </div>
+
+  <div class="writing-list fade-in">
+
+    <!-- ═══ TEMPLATE — duplicate this block for each paper ═══
+    <div class="card writing-item">
+      <div class="writing-title">Paper Title Here</div>
+      <div class="writing-meta">
+        <span class="writing-course">Course Name (COURSE 0000)</span>
+        <span class="writing-dot">·</span>
+        <span class="writing-semester">Spring 2026</span>
+      </div>
+      <div class="writing-abstract">
+        A one- or two-sentence summary of what this paper is about and its main argument or finding.
+      </div>
+      <div class="writing-footer">
+        <div class="writing-tags">
+          <span class="tag">Topic A</span>
+          <span class="tag">Topic B</span>
+        </div>
+        <div class="writing-links">
+          <a href="#" class="tag">PDF</a>
+        </div>
+      </div>
+    </div>
+    ═══ END TEMPLATE ═══ -->
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Caiyan Wu · Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<style>
+  .writing-list { display: flex; flex-direction: column; gap: 20px; }
+  .writing-item { padding: 24px 28px; }
+  .writing-title { font-family: var(--font-serif); font-size: 1.08rem; font-weight: 600; line-height: 1.4; margin-bottom: 6px; }
+  .writing-meta { font-size: 0.83rem; color: var(--color-text-muted); font-style: italic; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .writing-course { color: var(--color-text-secondary); font-style: normal; font-weight: 500; }
+  .writing-dot { color: var(--color-border); }
+  .writing-abstract { font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.75; margin-bottom: 14px; }
+  .writing-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .writing-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .writing-links { display: flex; gap: 8px; }
+</style>
+
+</body>
+</html>
